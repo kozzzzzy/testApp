@@ -33,7 +33,7 @@ class InputView: UIView {
     }
     
     func loadNib(){
-        let view = Bundle.main.loadNibNamed("InputView", owner: self, options: nil)?.first as! UIView
+        let view = Bundle.main.loadNibNamed("InputView", owner: self)?.first as! UIView
         view.frame = self.bounds
         self.addSubview(view)
     }
@@ -41,8 +41,8 @@ class InputView: UIView {
     func makeResult() -> String {
         guard let diceNumberText = diceNumberTextField.text,
             let diceDimensionText = diceDimensionTextField.text,
-            let diceNumber: Int = Int(diceNumberText),
-            let diceDimension: Int = Int(diceDimensionText) else {
+            let diceNumber = Int(diceNumberText),
+            let diceDimension = Int(diceDimensionText) else {
                 return "error"
         }
         
@@ -55,8 +55,8 @@ class InputView: UIView {
         let sum = diceArray.reduce(0, { (num1, num2) -> Int in
             num1 + num2
         })
-        let result = String(sum)
-        return result
+        
+        return sum.description
     }
     
     @IBAction func tapDiceRollButton() {
