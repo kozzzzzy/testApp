@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-CT-lki">
+                                <rect key="frame" x="0.0" y="20" width="375" height="256"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwl-N2-xhM">
+                                        <rect key="frame" x="158.5" y="114.5" width="59" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="6Lj-Xd-zyy"/>
+                                    <constraint firstItem="Wwl-N2-xhM" firstAttribute="centerY" secondItem="Kkf-CT-lki" secondAttribute="centerY" id="7se-v2-SJE"/>
+                                    <constraint firstItem="Wwl-N2-xhM" firstAttribute="centerX" secondItem="Kkf-CT-lki" secondAttribute="centerX" id="8Fn-aS-txc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MQ-43-NZe" customClass="InputView" customModule="testApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="411" width="375" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="wav-sD-9eQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kkf-CT-lki" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XgU-qY-imy"/>
+                            <constraint firstItem="5MQ-43-NZe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eEZ-2c-V4f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5MQ-43-NZe" secondAttribute="bottom" id="eNd-ZP-hqR"/>
+                            <constraint firstAttribute="trailing" secondItem="Kkf-CT-lki" secondAttribute="trailing" id="fZM-Cx-1Cy"/>
+                            <constraint firstAttribute="trailing" secondItem="5MQ-43-NZe" secondAttribute="trailing" id="vhi-pX-RBv"/>
+                            <constraint firstItem="Kkf-CT-lki" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zzh-2U-yLZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diceInputView" destination="5MQ-43-NZe" id="xdy-dC-WWb"/>
+                        <outlet property="resultLabel" destination="Wwl-N2-xhM" id="TZd-zL-D3x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

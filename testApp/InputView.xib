@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputView" customModule="testApp" customModuleProvider="target">
+            <connections>
+                <outlet property="diceDimensionTextField" destination="q8K-8O-tJP" id="i3R-nK-ZI1"/>
+                <outlet property="diceNumberTextField" destination="X10-hL-b0y" id="KfP-qA-QV0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK3-mM-GTV">
+                    <rect key="frame" x="32" y="176" width="311" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="fuk-TW-Fi6"/>
+                    </constraints>
+                    <state key="normal" title="ダイスロール"/>
+                    <connections>
+                        <action selector="tapDiceRollButton" destination="-1" eventType="touchUpInside" id="dGB-gp-RHC"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_dice" translatesAutoresizingMaskIntoConstraints="NO" id="1IB-3V-Vee">
+                    <rect key="frame" x="171.5" y="16" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="767-pD-40k"/>
+                        <constraint firstAttribute="height" constant="32" id="wwe-XQ-wNn"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X10-hL-b0y">
+                    <rect key="frame" x="32" y="16" width="123.5" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="aVP-ko-MGC"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8K-8O-tJP">
+                    <rect key="frame" x="219.5" y="16" width="123.5" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="GIo-mo-WGQ"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="X10-hL-b0y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="0IL-gw-k5A"/>
+                <constraint firstItem="1IB-3V-Vee" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="1Va-Lc-5hz"/>
+                <constraint firstAttribute="bottom" secondItem="NK3-mM-GTV" secondAttribute="bottom" constant="16" id="6Uk-Xv-Kny"/>
+                <constraint firstItem="NK3-mM-GTV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="KPh-GQ-wQY"/>
+                <constraint firstItem="1IB-3V-Vee" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Zcl-ex-bSK"/>
+                <constraint firstItem="q8K-8O-tJP" firstAttribute="leading" secondItem="1IB-3V-Vee" secondAttribute="trailing" constant="16" id="ZeE-Xh-S3z"/>
+                <constraint firstItem="q8K-8O-tJP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="cSB-Wg-arm"/>
+                <constraint firstAttribute="trailing" secondItem="q8K-8O-tJP" secondAttribute="trailing" constant="32" id="kLy-cY-l3d"/>
+                <constraint firstItem="X10-hL-b0y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="kdk-RK-SaV"/>
+                <constraint firstAttribute="trailing" secondItem="NK3-mM-GTV" secondAttribute="trailing" constant="32" id="src-ZI-H9B"/>
+                <constraint firstItem="1IB-3V-Vee" firstAttribute="leading" secondItem="X10-hL-b0y" secondAttribute="trailing" constant="16" id="tNh-04-7h4"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29.5" y="-97"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_dice" width="256" height="256"/>
+    </resources>
+</document>
